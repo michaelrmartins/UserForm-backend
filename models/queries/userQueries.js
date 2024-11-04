@@ -5,10 +5,14 @@ SELECT *
 
 `;  // End
 
+const queryRegNewUser = `
+-- arquivo queries.sql
+INSERT INTO users (USERNAME, BIRTHDATE, CPF, ID_ROLE)
+VALUES (?, ?, ?, ?);
 
-
-
+`
 
 module.exports = {
-queryGetAllUsers
+    queryGetAllUsers,
+    queryRegNewUser,
 }
